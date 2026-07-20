@@ -14,3 +14,5 @@
 5. github 계정 연동
 
 6. ros2 설치 - jazzy
+
+7. turtlesim node 실행
