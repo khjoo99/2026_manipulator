@@ -36,4 +36,4 @@
     ros2 node info /turtlesim
 
     키보드 이용
-    ros2 run turtlesim turtlesim_node
+    ros2 run turtlesim turtle_teleope_key
