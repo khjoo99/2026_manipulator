@@ -12,3 +12,5 @@
 4. vscode 설치 및 remote wsl로 접속
 
 5. github 계정 연동
+
+6. ros2 설치 - jazzy
