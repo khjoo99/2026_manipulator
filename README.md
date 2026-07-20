@@ -17,4 +17,8 @@
 
 7. turtlesim node 실행
 
-7-1. xeyes 실행
+    7-1. xeyes 실행 
+    
+    sudo apt install x11-apps
+
+    xeyes
