@@ -58,7 +58,7 @@
 
     7-11. 파라미터 확인
     ros2 node info /turtlesim -> 파라미터 이름은 확인 불가능
-    ros2 param list <use_sim_time은 어느 파라미터 리스트를 봐도 다 있음 실습할때 주의>
+    ros2 param list <use_sim_time은 어느 파라미터 리스트를 봐도 다 있음>
 
     7-12. 배경 색 바꾸기
     ros2 param get /turtlesim background_b(파랑)
