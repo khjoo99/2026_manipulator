@@ -16,3 +16,5 @@
 6. ros2 설치 - jazzy
 
 7. turtlesim node 실행
+
+7-1. xeyes 실행
