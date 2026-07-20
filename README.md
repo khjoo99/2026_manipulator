@@ -18,7 +18,22 @@
 7. turtlesim node 실행
 
     7-1. xeyes 실행 
-    
     sudo apt install x11-apps
-
     xeyes
+
+    7-2. turtlesim node 실행
+
+    단위 명시 없을 시 기본적으로 길이는 m, 각도는 rad
+
+    기본적인 거북이 소환
+    ros2 run turtlesim turtlesim_node 
+
+    거북이 이름 바꾸기
+    ros2 run turtlesim turtlesim_node  --ros-args --remap __node:=my_turtle
+
+    노드 정보 확인
+    ros2 node list
+    ros2 node info /turtlesim
+
+    키보드 이용
+    ros2 run turtlesim turtlesim_node
