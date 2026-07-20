@@ -37,3 +37,29 @@
 
     키보드 이용
     ros2 run turtlesim turtle_teleope_key
+
+    토픽 로그 확인
+    ros2 topic list
+    ros2 topic echo /turtle1/cmd_vel
+
+    로봇이 바라보는 방향이 x축,양수(본인 몸통 기준)
+
+    거북이 움직임 직접 지정하기(사람이 직접 강제로 토픽 발행)
+    ros2 topic pub --rate 1 /turtle1/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 2.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: 1.8}}"
+
+    rqt_gragh 시각화하여 보기
+
+    rqt를 이용하여 서비스 콜 하기
+    piugins -> service -> service caller
+
+    액션 발행
+    ros2 interface proto turtlesim/action/RotateAbsolute
+    ros2 action send_goal /turtle1/rotate_absolute
+
+    파라미터 확인
+    ros2 node info /turtlesim -> 파라미터 이름은 확인 불가능
+    ros2 param list <use_sim_time은 어느 파라미터 리스트를 봐도 다 있음 실습할때 주의>
+
+    배경 색 바꾸기
+    ros2 param get /turtlesim background_b
+    ros2 param set /turtlesim background_r 69
