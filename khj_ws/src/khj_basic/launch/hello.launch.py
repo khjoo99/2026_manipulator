@@ -8,4 +8,4 @@ def generate_launch_description():
             Node(package="khj_basic", executable="class_pub"),
             Node(package="khj_basic", executable="class_sub"),
         ]
-    )
+    ) 
