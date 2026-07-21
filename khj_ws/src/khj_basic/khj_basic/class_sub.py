@@ -3,9 +3,9 @@ from rclpy.node import Node
 from std_msgs.msg import String
 
 
-class M_pub(Node):
+class M_sub(Node):
     def __init__(self):
-        super().__init__("message_pub")  # 노드 이름
+        super().__init__("message_sub")  # 노드 이름
         # subscrition callback 등록
         self.create_subscription(String, "message", self.sub_callback, 10)
         self.count = 0
@@ -16,7 +16,7 @@ class M_pub(Node):
 
 def main(args=None):
     rclpy.init(args=args)   # rmw 활성화
-    node = M_pub()  # 노드 이름
+    node = M_sub()  # 노드 이름
     
     try:
         rclpy.spin(node)  # 블럭 (무한 루프)
