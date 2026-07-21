@@ -1,3 +1,5 @@
+from glob import glob
+import os
 from setuptools import find_packages, setup
 
 package_name = 'khj_basic'
@@ -9,7 +11,8 @@ setup(
     data_files=[
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
+        ("share/" + package_name, ['package.xml']),
+        ("share/" + package_name + "/launch", glob(os.path.join("launch", "*.launch.py"))),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -26,7 +29,8 @@ setup(
         'console_scripts': [
             "simple_pub = khj_basic.simple_pub:main",
             "class_pub = khj_basic.class_pub:main",
-            "class_sub = khj_basic.class_sub:main"
+            "class_sub = khj_basic.class_sub:main",
+            "header_pub = khj_basic.header_pub:main"
         ],
     },
 )

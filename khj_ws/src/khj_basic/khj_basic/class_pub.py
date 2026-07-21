@@ -15,7 +15,7 @@ class M_pub(Node):
         msg = String()
         msg.data = f"첫번째 프로그램 {self.count}"
         self.get_logger().info(msg.data)
-        self.pub.publish(msg)
+        self.pub.publish(msg)   #DDS로 보내는 역할을 수행
         self.count += 1
 
 def main(args=None):
