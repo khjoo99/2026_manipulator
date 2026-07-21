@@ -2,7 +2,7 @@ from glob import glob
 import os
 from setuptools import find_packages, setup
 
-package_name = 'khj_basic'
+package_name = 'khj_basic' 
 
 setup(
     name=package_name,
