@@ -1,0 +1,30 @@
+running egg_info
+creating ../../build/khj_basic/khj_basic.egg-info
+writing ../../build/khj_basic/khj_basic.egg-info/PKG-INFO
+writing dependency_links to ../../build/khj_basic/khj_basic.egg-info/dependency_links.txt
+writing requirements to ../../build/khj_basic/khj_basic.egg-info/requires.txt
+writing top-level names to ../../build/khj_basic/khj_basic.egg-info/top_level.txt
+writing manifest file '../../build/khj_basic/khj_basic.egg-info/SOURCES.txt'
+reading manifest file '../../build/khj_basic/khj_basic.egg-info/SOURCES.txt'
+writing manifest file '../../build/khj_basic/khj_basic.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build
+creating /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build/lib
+creating /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build/lib/khj_basic
+copying khj_basic/__init__.py -> /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build/lib/khj_basic
+running install
+running install_lib
+creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic
+copying /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build/lib/khj_basic/__init__.py -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic
+byte-compiling /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic/__init__.py to __init__.cpython-312.pyc
+running install_data
+creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index
+creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index/resource_index
+creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index/resource_index/packages
+copying resource/khj_basic -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index/resource_index/packages
+copying package.xml -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/khj_basic
+running install_egg_info
+Copying ../../build/khj_basic/khj_basic.egg-info to /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic-0.0.0-py3.12.egg-info
+running install_scripts
+writing list of installed files to '/home/khjoo/2026_manipulator/khj_ws/build/khj_basic/install.log'

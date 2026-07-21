@@ -1,0 +1,32 @@
+[0.972s] Invoking command in '/home/khjoo/2026_manipulator/khj_ws/src/khj_basic': PYTHONPATH=/home/khjoo/2026_manipulator/khj_ws/build/khj_basic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/khj_basic build --build-base /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build install --record /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/install.log --install-scripts $base/lib/khj_basic --single-version-externally-managed install_data
+[1.184s] running egg_info
+[1.185s] creating ../../build/khj_basic/khj_basic.egg-info
+[1.199s] writing ../../build/khj_basic/khj_basic.egg-info/PKG-INFO
+[1.200s] writing dependency_links to ../../build/khj_basic/khj_basic.egg-info/dependency_links.txt
+[1.200s] writing requirements to ../../build/khj_basic/khj_basic.egg-info/requires.txt
+[1.200s] writing top-level names to ../../build/khj_basic/khj_basic.egg-info/top_level.txt
+[1.200s] writing manifest file '../../build/khj_basic/khj_basic.egg-info/SOURCES.txt'
+[1.239s] reading manifest file '../../build/khj_basic/khj_basic.egg-info/SOURCES.txt'
+[1.240s] writing manifest file '../../build/khj_basic/khj_basic.egg-info/SOURCES.txt'
+[1.240s] running build
+[1.240s] running build_py
+[1.240s] creating /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build
+[1.241s] creating /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build/lib
+[1.241s] creating /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build/lib/khj_basic
+[1.241s] copying khj_basic/__init__.py -> /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build/lib/khj_basic
+[1.241s] running install
+[1.249s] running install_lib
+[1.269s] creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic
+[1.269s] copying /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build/lib/khj_basic/__init__.py -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic
+[1.270s] byte-compiling /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic/__init__.py to __init__.cpython-312.pyc
+[1.270s] running install_data
+[1.271s] creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index
+[1.271s] creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index/resource_index
+[1.271s] creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index/resource_index/packages
+[1.271s] copying resource/khj_basic -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index/resource_index/packages
+[1.272s] copying package.xml -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/khj_basic
+[1.272s] running install_egg_info
+[1.296s] Copying ../../build/khj_basic/khj_basic.egg-info to /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic-0.0.0-py3.12.egg-info
+[1.297s] running install_scripts
+[1.433s] writing list of installed files to '/home/khjoo/2026_manipulator/khj_ws/build/khj_basic/install.log'
+[1.463s] Invoked command in '/home/khjoo/2026_manipulator/khj_ws/src/khj_basic' returned '0': PYTHONPATH=/home/khjoo/2026_manipulator/khj_ws/build/khj_basic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/khj_basic build --build-base /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build install --record /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/install.log --install-scripts $base/lib/khj_basic --single-version-externally-managed install_data
