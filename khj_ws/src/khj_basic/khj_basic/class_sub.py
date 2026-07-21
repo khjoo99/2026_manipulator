@@ -11,7 +11,7 @@ class M_sub(Node):
         self.count = 0
         
     def sub_callback(self, msg: String):
-        self.get_logger().info(msg.data)
+        self.get_logger().info(msg.data) 
 
 
 def main(args=None):
