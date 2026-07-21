@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from std_msgs.msg import String
 
 
 def timer_callback():
@@ -10,7 +11,8 @@ def main(args=None):
     rclpy.init(args=args)   # rmw 활성화
     node = Node("message_pub")  # 노드 이름
     #  timer 등록
-    node.create_timer(1, timer_callback) 
+    node.create_timer(1, timer_callback)
+    pub = node.create_publisher(String, "message", 10)  # publisher 등록
     
     try:
         rclpy.spin(node)  # 블럭 (무한 루프)
