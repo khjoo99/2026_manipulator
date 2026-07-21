@@ -1,0 +1,19 @@
+[0.916s] Invoking command in '/home/khjoo/2026_manipulator/khj_ws/src/khj_basic': PYTHONPATH=/home/khjoo/2026_manipulator/khj_ws/build/khj_basic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/khj_basic build --build-base /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build install --record /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/install.log --install-scripts $base/lib/khj_basic --single-version-externally-managed install_data
+[1.128s] running egg_info
+[1.144s] writing ../../build/khj_basic/khj_basic.egg-info/PKG-INFO
+[1.145s] writing dependency_links to ../../build/khj_basic/khj_basic.egg-info/dependency_links.txt
+[1.145s] writing requirements to ../../build/khj_basic/khj_basic.egg-info/requires.txt
+[1.145s] writing top-level names to ../../build/khj_basic/khj_basic.egg-info/top_level.txt
+[1.173s] reading manifest file '../../build/khj_basic/khj_basic.egg-info/SOURCES.txt'
+[1.174s] writing manifest file '../../build/khj_basic/khj_basic.egg-info/SOURCES.txt'
+[1.174s] running build
+[1.174s] running build_py
+[1.174s] running install
+[1.179s] running install_lib
+[1.196s] running install_data
+[1.196s] running install_egg_info
+[1.210s] removing '/home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic-0.0.0-py3.12.egg-info' (and everything under it)
+[1.211s] Copying ../../build/khj_basic/khj_basic.egg-info to /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj_basic-0.0.0-py3.12.egg-info
+[1.212s] running install_scripts
+[1.311s] writing list of installed files to '/home/khjoo/2026_manipulator/khj_ws/build/khj_basic/install.log'
+[1.335s] Invoked command in '/home/khjoo/2026_manipulator/khj_ws/src/khj_basic' returned '0': PYTHONPATH=/home/khjoo/2026_manipulator/khj_ws/build/khj_basic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/khj_basic build --build-base /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build install --record /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/install.log --install-scripts $base/lib/khj_basic --single-version-externally-managed install_data
