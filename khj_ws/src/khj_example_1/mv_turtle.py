@@ -29,7 +29,7 @@ def main(args=None):
     except KeyboardInterrupt:
         node.get_logger().info("KeyboardInterrupt")
     finally:
-        node.destroy_node()
+        node.destroy_node() 
 
 
 if __name__ == "__main__":
