@@ -32,6 +32,7 @@ setup(
             'm2_sub = khj_example_1.m2_sub:main',
             't_pub = khj_example_1.t_pub:main',
             'mt_sub = khj_example_1.mt_sub:main',
+            'mv_turtle = khj_example_1.mv_turtle:main',
         ],
     },
 )
