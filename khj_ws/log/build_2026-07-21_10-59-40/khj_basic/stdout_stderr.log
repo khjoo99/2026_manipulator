@@ -1,0 +1,17 @@
+running develop
+running egg_info
+writing khj_basic.egg-info/PKG-INFO
+writing dependency_links to khj_basic.egg-info/dependency_links.txt
+writing entry points to khj_basic.egg-info/entry_points.txt
+writing requirements to khj_basic.egg-info/requires.txt
+writing top-level names to khj_basic.egg-info/top_level.txt
+reading manifest file 'khj_basic.egg-info/SOURCES.txt'
+writing manifest file 'khj_basic.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj-basic.egg-link (link to .)
+Installing simple_pub script to /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/khj_basic
+
+Installed /home/khjoo/2026_manipulator/khj_ws/build/khj_basic
+running symlink_data
+symbolically linking /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/resource/khj_basic -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index/resource_index/packages
+symbolically linking /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/package.xml -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/khj_basic

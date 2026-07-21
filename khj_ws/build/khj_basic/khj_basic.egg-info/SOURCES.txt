@@ -10,7 +10,11 @@ setup.py
 ../../build/khj_basic/khj_basic.egg-info/zip-safe
 khj_basic/__init__.py
 khj_basic/simple_pub.py
+khj_basic.egg-info/PKG-INFO
+khj_basic.egg-info/SOURCES.txt
+khj_basic.egg-info/dependency_links.txt
+khj_basic.egg-info/entry_points.txt
+khj_basic.egg-info/requires.txt
+khj_basic.egg-info/top_level.txt
+khj_basic.egg-info/zip-safe
 resource/khj_basic
-test/test_copyright.py
-test/test_flake8.py
-test/test_pep257.py

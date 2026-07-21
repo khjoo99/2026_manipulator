@@ -4,3 +4,6 @@ source;share/khj_basic/hook/pythonpath.sh
 source;share/khj_basic/hook/ament_prefix_path.ps1
 source;share/khj_basic/hook/ament_prefix_path.dsv
 source;share/khj_basic/hook/ament_prefix_path.sh
+source;../../build/khj_basic/share/khj_basic/hook/pythonpath_develop.ps1
+source;../../build/khj_basic/share/khj_basic/hook/pythonpath_develop.dsv
+source;../../build/khj_basic/share/khj_basic/hook/pythonpath_develop.sh

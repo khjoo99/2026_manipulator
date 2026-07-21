@@ -1,0 +1,19 @@
+[1.033s] Invoking command in '/home/khjoo/2026_manipulator/khj_ws/build/khj_basic': PYTHONPATH=/home/khjoo/2026_manipulator/khj_ws/build/khj_basic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build --no-deps symlink_data --force
+[1.301s] running develop
+[1.462s] running egg_info
+[1.479s] writing khj_basic.egg-info/PKG-INFO
+[1.479s] writing dependency_links to khj_basic.egg-info/dependency_links.txt
+[1.479s] writing entry points to khj_basic.egg-info/entry_points.txt
+[1.479s] writing requirements to khj_basic.egg-info/requires.txt
+[1.479s] writing top-level names to khj_basic.egg-info/top_level.txt
+[1.514s] reading manifest file 'khj_basic.egg-info/SOURCES.txt'
+[1.516s] writing manifest file 'khj_basic.egg-info/SOURCES.txt'
+[1.534s] running build_ext
+[1.536s] Creating /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages/khj-basic.egg-link (link to .)
+[1.537s] Installing simple_pub script to /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/khj_basic
+[1.538s] 
+[1.538s] Installed /home/khjoo/2026_manipulator/khj_ws/build/khj_basic
+[1.538s] running symlink_data
+[1.538s] symbolically linking /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/resource/khj_basic -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/ament_index/resource_index/packages
+[1.539s] symbolically linking /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/package.xml -> /home/khjoo/2026_manipulator/khj_ws/install/khj_basic/share/khj_basic
+[1.568s] Invoked command in '/home/khjoo/2026_manipulator/khj_ws/build/khj_basic' returned '0': PYTHONPATH=/home/khjoo/2026_manipulator/khj_ws/build/khj_basic/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/khjoo/2026_manipulator/khj_ws/install/khj_basic/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/khjoo/2026_manipulator/khj_ws/build/khj_basic/build --no-deps symlink_data --force
