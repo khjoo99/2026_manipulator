@@ -24,7 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
-            "simple_pub = khj_basic.simple_pub:main"
+            "simple_pub = khj_basic.simple_pub:main",
+            "class_pub = khj_basic.class_pub:main"
         ],
     },
 )
