@@ -1,2 +1,3 @@
 [console_scripts]
+class_pub = khj_basic.class_pub:main
 simple_pub = khj_basic.simple_pub:main
