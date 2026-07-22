@@ -1,4 +1,4 @@
-std_msgs/msg/Header header
+std_msgs/Header header
 int32 user_int
 int32 user_int2
-int32 user_int32
+int32 user_int3
