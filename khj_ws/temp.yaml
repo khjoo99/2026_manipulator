@@ -1,0 +1,7 @@
+/tparam:
+  ros__parameters:
+    my_param: "\uD30C\uB77C\uBBF8\uD130 \uD30C\uC77C\uC5D0\uC11C \uC801\uC6A9\uD55C\
+      \ \uD30C\uB77C\uBBF8\uD130 \uBCC0\uC2181212"
+    start_type_description_service: true
+    use_sim_time: false
+

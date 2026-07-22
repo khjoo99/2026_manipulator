@@ -10,7 +10,7 @@ from launch_ros.actions import Node
 def generate_launch_description():
     param_dir = LaunchConfiguration(
         "param_dir",
-        default=os.path.join(get_package_share_directory("gong_basic"), "param", "my_param.yaml"),
+        default=os.path.join(get_package_share_directory("khj_basic"), "param", "my_param.yaml"),
     )
     return LaunchDescription(
         [
@@ -20,7 +20,7 @@ def generate_launch_description():
                 description="launch parameter 를 지정하는 옵션",
             ),
             Node(
-                package="gong_basic",
+                package="khj_basic",
                 executable="my_param",
                 parameters=[param_dir],
             ),

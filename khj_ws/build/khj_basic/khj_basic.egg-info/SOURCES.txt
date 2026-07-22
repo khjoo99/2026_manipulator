@@ -30,4 +30,6 @@ khj_basic.egg-info/top_level.txt
 khj_basic.egg-info/zip-safe
 launch/hello.launch.py
 launch/param.launch.py
+param/my_param.yaml
+param/my_param2.yaml
 resource/khj_basic
