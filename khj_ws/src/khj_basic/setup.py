@@ -32,7 +32,7 @@ setup(
             "class_sub = khj_basic.class_sub:main",
             "header_pub = khj_basic.header_pub:main",
             "qos_test_pub = khj_basic.qos_test_pub:main",
-            "qos_test_sub = khj_basic.qos_test_sub:main"
+            "qos_test_sub = khj_basic.qos_test_sub:main",
             "user_int_pub = khj_basic.user_int_pub:main"
         ],
     },
