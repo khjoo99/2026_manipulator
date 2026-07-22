@@ -12,6 +12,8 @@ khj_basic/__init__.py
 khj_basic/class_pub.py
 khj_basic/class_sub.py
 khj_basic/header_pub.py
+khj_basic/qos_test_pub.py
+khj_basic/qos_test_sub.py
 khj_basic/simple_pub.py
 khj_basic.egg-info/PKG-INFO
 khj_basic.egg-info/SOURCES.txt
