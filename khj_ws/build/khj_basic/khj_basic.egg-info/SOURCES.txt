@@ -29,4 +29,5 @@ khj_basic.egg-info/requires.txt
 khj_basic.egg-info/top_level.txt
 khj_basic.egg-info/zip-safe
 launch/hello.launch.py
+launch/param.launch.py
 resource/khj_basic
