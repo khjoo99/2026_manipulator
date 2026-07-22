@@ -15,7 +15,7 @@ class M_pub(Node):
         msg.header.stamp = self.get_clock().now().to_msg()
         msg.user_int = 12
         msg.user_int2 = 23
-        msg.user_int3 = 53
+        msg.user_int32 = 53
         self.pub.publish(msg)  # DDS 로 보내는 기능 수행
 
 
