@@ -3,7 +3,7 @@ from glob import glob
 
 from setuptools import find_packages, setup
 
-package_name = "gong_basic"
+package_name = "khj_basic"
 
 setup(
     name=package_name,

@@ -1,8 +1,8 @@
 Metadata-Version: 2.1
 Name: khj-basic
 Version: 0.0.0
-Summary: TODO: Package description
-Maintainer: khjoo
-Maintainer-email: khjoo990408@gmail.com
-License: TODO: License declaration
+Summary: gongju university ROS2 basic library
+Maintainer: choi su gil
+Maintainer-email: freshmea@naver.com
+License: Apache 2.0
 Provides-Extra: test
