@@ -43,6 +43,7 @@ setup(
             "service_server = khj_basic.service_server:main",
             "service_thread_server = khj_basic.service_thread_server:main",
             "service_client = khj_basic.service_client:main",
+            "my_param = khj_basic.my_param:main",
         ],
     },
 )
