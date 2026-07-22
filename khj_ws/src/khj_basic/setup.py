@@ -41,6 +41,7 @@ setup(
             "qos_test_sub = khj_basic.qos_test_sub:main",
             "user_int_pub = khj_basic.user_int_pub:main",
             "service_server = khj_basic.service_server:main",
+            "service_thread_server = khj_basic.service_thread_server:main",
         ],
     },
 )
