@@ -8,6 +8,7 @@ msub = khj_basic.msub:main
 mtsub = khj_basic.mtsub:main
 mv_turtle = khj_basic.mv_turtle:main
 my_param = khj_basic.my_param:main
+param_async = khj_basic.param_async:main
 qos_test_pub = khj_basic.qos_test_pub:main
 qos_test_sub = khj_basic.qos_test_sub:main
 service_client = khj_basic.service_client:main

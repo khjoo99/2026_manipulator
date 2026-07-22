@@ -4,9 +4,9 @@ from rclpy.node import Node
 from rclpy.parameter import Parameter
 
 
-class TParam(Node):
+class ParamAsync(Node):
     def __init__(self):
-        super().__init__("tparam")  # 노드 이름
+        super().__init__("param_async")  # 노드 이름
         # timer 등록
         self.declare_parameter("my_param", "내가 만든 클래스 노드 안의 파라미터")
         self.my_param = self.get_parameter("my_param").get_parameter_value().string_value
