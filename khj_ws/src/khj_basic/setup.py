@@ -42,6 +42,7 @@ setup(
             "user_int_pub = khj_basic.user_int_pub:main",
             "service_server = khj_basic.service_server:main",
             "service_thread_server = khj_basic.service_thread_server:main",
+            "service_client = khj_basic.service_client:main",
         ],
     },
 )

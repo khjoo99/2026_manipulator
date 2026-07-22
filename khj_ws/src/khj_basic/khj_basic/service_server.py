@@ -26,7 +26,7 @@ def main(args=None):
     try:
         rclpy.spin(node)  # 블럭 (무한 루프)
     except KeyboardInterrupt:
-        node.get_logger().info("키보드 인터럽트")
+        print("키보드 인터럽트")
     finally:
         node.destroy_node()
 

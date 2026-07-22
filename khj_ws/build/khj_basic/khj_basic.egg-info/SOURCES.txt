@@ -14,6 +14,7 @@ khj_basic/class_sub.py
 khj_basic/header_pub.py
 khj_basic/qos_test_pub.py
 khj_basic/qos_test_sub.py
+khj_basic/service_client.py
 khj_basic/service_server.py
 khj_basic/service_thread_server.py
 khj_basic/simple_pub.py
