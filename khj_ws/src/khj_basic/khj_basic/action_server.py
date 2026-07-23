@@ -19,7 +19,7 @@ class Action_server(Node):
         self.get_logger().info(f"{goal_handle.status}")
         self.get_logger().info(f"GoalStatus.STATUS_EXECUTING{GoalStatus.STATUS_EXECUTING}")
         if goal_handle.status == GoalStatus.STATUS_EXECUTING:
-            self.get_logger().info("현재 실행 중입니다.")
+            self.get_logger().info("현재 실행 중입니다.") 
         goal: Fibonacci.Goal = goal_handle.request
         step = goal.step
         feedback_msg = Fibonacci.Feedback()
