@@ -1,4 +1,5 @@
 [console_scripts]
+action_client = khj_basic.action_client:main
 action_server = khj_basic.action_server:main
 class_pub = khj_basic.class_pub:main
 class_sub = khj_basic.class_sub:main
