@@ -1,6 +1,7 @@
 [console_scripts]
 action_client = khj_basic.action_client:main
 action_server = khj_basic.action_server:main
+action_thread_server = khj_basic.action_thread_server:main
 class_pub = khj_basic.class_pub:main
 class_sub = khj_basic.class_sub:main
 header_pub = khj_basic.header_pub:main

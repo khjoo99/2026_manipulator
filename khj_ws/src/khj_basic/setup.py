@@ -60,6 +60,7 @@ setup(
             "param_async = khj_basic.param_async:main",
             "action_server = khj_basic.action_server:main",
             "action_client = khj_basic.action_client:main",
+            "action_thread_server = khj_basic.action_thread_server:main",
             
         ],
     },

@@ -11,6 +11,7 @@ setup.py
 khj_basic/__init__.py
 khj_basic/action_client.py
 khj_basic/action_server.py
+khj_basic/action_thread_server.py
 khj_basic/class_pub.py
 khj_basic/class_sub.py
 khj_basic/header_pub.py
