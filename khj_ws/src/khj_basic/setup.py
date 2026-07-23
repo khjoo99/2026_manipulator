@@ -50,6 +50,7 @@ setup(
             "m2sub = khj_basic.m2sub:main",
             "mtsub = khj_basic.mtsub:main",
             "mv_turtle = khj_basic.mv_turtle:main",
+            "mv_turtle_ns = khj_basic.mv_turtle_ns:main",
             "qos_test_pub = khj_basic.qos_test_pub:main",
             "qos_test_sub = khj_basic.qos_test_sub:main",
             "user_int_pub = khj_basic.user_int_pub:main",
