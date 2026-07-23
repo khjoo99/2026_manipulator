@@ -9,6 +9,7 @@ setup.py
 ../../build/khj_basic/khj_basic.egg-info/top_level.txt
 ../../build/khj_basic/khj_basic.egg-info/zip-safe
 khj_basic/__init__.py
+khj_basic/action_server.py
 khj_basic/class_pub.py
 khj_basic/class_sub.py
 khj_basic/header_pub.py

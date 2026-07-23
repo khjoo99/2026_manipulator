@@ -58,6 +58,7 @@ setup(
             "service_client = khj_basic.service_client:main",
             "my_param = khj_basic.my_param:main",
             "param_async = khj_basic.param_async:main",
+            "action_server = khj_basic.action_server:main",
             
         ],
     },
