@@ -16,7 +16,7 @@ def generate_launch_description():
     )
     gui_arg = DeclareLaunchArgument(
         name="gui",
-        default_value="true",
+        default_value="false",
         choices=["true", "false"],
         description="gui display enable option",
     )
@@ -39,7 +39,6 @@ def generate_launch_description():
                     "urdf_package_path": LaunchConfiguration("model"),
                     "rviz_config": LaunchConfiguration("rvizconfig"),
                     "jsp_gui": LaunchConfiguration("gui"),
-                    "remappings": "[('/tf', '/robot1/tf'), ('/tf_static', '/robot1/tf_static')]",
                 }.items(),
             ),
         ]
