@@ -176,7 +176,7 @@ class TurtleFollower(Node):
 def main(args=None):
     rclpy.init(args=args)
 
-    node = TurtleFollower()
+    node = TurtleFollower() 
 
     try:
         rclpy.spin(node)
