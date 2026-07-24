@@ -35,6 +35,7 @@ setup(
             "tf_listener = tf2_basic.tf_listener:main",
             "turtle_tf_listener = tf2_basic.turtle_tf_listener:main",
             "follow_turtle = tf2_basic.follow_turtle:main",
+            "move_u2d2 = tf2_basic.move_u2d2:main",
         ],
     },
 )

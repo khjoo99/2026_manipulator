@@ -9,7 +9,7 @@ def generate_launch_description():
         [FindPackageShare("tf2_basic"), "rviz", "urdf.rviz"]
     )
     default_model_path = PathJoinSubstitution(
-        [FindPackageShare("tf2_basic"), "urdf", "04_pysics.urdf"]
+        [FindPackageShare("tf2_basic"), "urdf", "05_add_arm.urdf"]
     )
     model = DeclareLaunchArgument(
         name="model", default_value=default_model_path, description="model path"
