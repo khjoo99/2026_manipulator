@@ -1,0 +1,63 @@
+# OpenMANIPULATOR-X 춤 동작 데이터
+# positions 순서: joint1, joint2, joint3, joint4
+# 모든 각도 단위는 radian이다.
+#
+# 시작할 때 ready 자세를 먼저 실행하고,
+# 이후 poses의 자세들을 random.shuffle()로 무작위 순서로 실행한다.
+
+joint_names:
+  - joint1
+  - joint2
+  - joint3
+  - joint4
+
+start_pose: ready
+
+poses:
+  - name: ready
+    positions: [0.00, -0.80, 0.35, 0.70]
+    gripper: 0.019
+    duration: 2.50
+    pause: 0.40
+
+  - name: left_low
+    positions: [-0.65, -0.85, 0.40, 0.85]
+    gripper: -0.010
+    duration: 2.00
+    pause: 0.20
+
+  - name: right_low
+    positions: [0.65, -0.85, 0.40, 0.85]
+    gripper: 0.019
+    duration: 2.00
+    pause: 0.20
+
+  - name: left_high
+    positions: [-0.55, -0.55, -0.15, -0.45]
+    gripper: 0.019
+    duration: 2.20
+    pause: 0.20
+
+  - name: right_high
+    positions: [0.55, -0.55, -0.15, -0.45]
+    gripper: -0.010
+    duration: 2.20
+    pause: 0.20
+
+  - name: bow
+    positions: [0.00, -1.10, 0.70, 0.35]
+    gripper: 0.019
+    duration: 2.30
+    pause: 0.35
+
+  - name: twist_left
+    positions: [-0.90, -0.70, 0.15, 0.60]
+    gripper: -0.010
+    duration: 2.00
+    pause: 0.20
+
+  - name: twist_right
+    positions: [0.90, -0.70, 0.15, 0.60]
+    gripper: 0.019
+    duration: 2.00
+    pause: 0.20
