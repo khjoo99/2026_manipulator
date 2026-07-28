@@ -47,6 +47,7 @@ setup(
             "play_recorded_dance = tf2_basic.play_recorded_dance:main",
             "record_pick_place = tf2_basic.record_pick_place:main",
             "play_recorded_pick_place = tf2_basic.play_recorded_pick_place:main",
+            "moveit_test = tf2_basic.moveit_test:main",
         ],
     },
 )
