@@ -32,7 +32,7 @@ class TeachManipulator(Node):
     GRIPPER_LIMITS = [-0.011, 0.02]
 
     def __init__(self):
-        super().__init__("teach_manipulaotr")
+        super().__init__("teach_manipulator")
         self.joint_state_subscription = self.create_subscription(
             JointState, "/joint_states", self.joint_state_callback, 10
         )
@@ -72,9 +72,9 @@ class TeachManipulator(Node):
     def toque_response_callback(self, future):
         response = future.result()
         if response is None or response.success:
-            self.get_logger().info("실패")
-        else:
             self.get_logger().info("성공")
+        else:
+            self.get_logger().info("실패")
 
     def poll_keyboard(self):
         if self._stdin_fd is None or self._quit_requested:
