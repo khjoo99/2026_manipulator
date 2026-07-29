@@ -44,6 +44,7 @@ def generate_launch_description() -> LaunchDescription:
         "planning_pipelines": {
             "pipeline_names": ["ompl"],
         },
+        
         "ompl": ompl_parameters,
         "moveit_manage_controllers": True,
         "plan_request_params": {
