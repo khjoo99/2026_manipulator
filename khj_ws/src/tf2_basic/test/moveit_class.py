@@ -4,6 +4,8 @@ import os
 import sys
 
 import rclpy
+from moveit.core.kinematic_constraints import construct_joint_constraint
+from moveit.core.robot_state import RobotState
 from moveit.planning import MoveItPy
 from rclpy.node import Node
 
@@ -14,16 +16,21 @@ class OpenManipulatorMoveItNode(Node):
         self.moveit = MoveItPy(node_name="open_manipulator_moveit_py")
         self.arm = self.moveit.get_planning_component("arm")
         self.gripper = self.moveit.get_planning_component("gripper")
+        self.arm_robot_state1 = {
+            "joint1": -1.724194,
+            "joint2": -0.289922,
+            "joint3": 0.136524,
+            "joint4": 0.633534,
+        }
         self.move_manipulator()
 
-
     def move_manipulator(self):
-        for goal_name in ("home", "init", "my_pose", "left_pose", "right_pose", "carry_pose", "home", "init"):
+        for goal_name in ("home", "init", self.arm_robot_state1, "my_pose", "home", "init"):
             self.get_logger().info("joint move!!!")
             self.plan_and_execute(
                 self.moveit,
                 self.arm,
-                configuration_name=goal_name,
+                configuration=goal_name,
                 controller_name="arm_controller",
             )
         for goal_name in ("open", "close", "open", "close"):
@@ -31,7 +38,7 @@ class OpenManipulatorMoveItNode(Node):
             self.plan_and_execute(
                 self.moveit,
                 self.gripper,
-                configuration_name=goal_name,
+                configuration=goal_name,
                 controller_name="gripper_controller",
             )
 
@@ -39,7 +46,7 @@ class OpenManipulatorMoveItNode(Node):
         self,
         moveit: MoveItPy,
         component,
-        configuration: str | list[float],
+        configuration: str | dict[str, float],
         controller_name: str,
     ) -> bool:
         """Named state까지 경로를 계획하고 실행한다."""
@@ -47,7 +54,14 @@ class OpenManipulatorMoveItNode(Node):
         if issubclass(type(configuration), str):
             component.set_goal_state(configuration_name=configuration)
         else:
-            component.set_goal_state(configuration=configuration)
+            robot_model = self.moveit.get_robot_model()
+            robot_state = RobotState(robot_model)
+            robot_state.joint_positions = configuration
+            joint_model_group = robot_model.get_joint_model_group("arm")
+            joint_constraint = construct_joint_constraint(
+                robot_state=robot_state, joint_model_group=joint_model_group
+            )
+            component.set_goal_state(motion_plan_constraints=[joint_constraint])
 
         plan_result = component.plan()
 
