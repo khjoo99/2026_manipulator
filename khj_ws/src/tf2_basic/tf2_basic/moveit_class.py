@@ -13,72 +13,28 @@ from rclpy.node import Node
 class OpenManipulatorMoveItNode(Node):
     def __init__(self):
         super().__init__("open_manipulator_controller")
-
-        self.moveit = MoveItPy(
-            node_name="open_manipulator_moveit_py"
-        )
-
+        self.moveit = MoveItPy(node_name="open_manipulator_moveit_py")
         self.arm = self.moveit.get_planning_component("arm")
         self.gripper = self.moveit.get_planning_component("gripper")
-
         self.arm_robot_state1 = {
             "joint1": -1.724194,
             "joint2": -0.289922,
             "joint3": 0.136524,
             "joint4": 0.633534,
         }
-
-        self.arm_robot_state2 = {
-            "joint1": 1.724194,
-            "joint2": 0.289922,
-            "joint3": -0.136524,
-            "joint4": -0.633534,
-        }
-
-        self.arm_robot_state3 = {
-            "joint1": 0.0,
-            "joint2": 0.0,
-            "joint3": 0.0,
-            "joint4": 0.0,
-        }
-
         self.move_manipulator()
 
     def move_manipulator(self):
-        arm_goals = (
-            "home",
-            "init",
-            self.arm_robot_state1,
-            self.arm_robot_state2,
-            self.arm_robot_state3,
-            "my_pose",
-            "left_pose",
-            "right_pose",
-            "carry_pose",
-            "home",
-            "init",
-        )
-
-        for goal_name in arm_goals:
+        for goal_name in ("home", "init", self.arm_robot_state1, "my_pose", "home", "init"):
             self.get_logger().info("joint move!!!")
-
             self.plan_and_execute(
                 self.moveit,
                 self.arm,
                 configuration=goal_name,
                 controller_name="arm_controller",
             )
-
-        gripper_goals = (
-            "open",
-            "close",
-            "open",
-            "close",
-        )
-
-        for goal_name in gripper_goals:
+        for goal_name in ("open", "close", "open", "close"):
             self.get_logger().info("gripper move!!!")
-
             self.plan_and_execute(
                 self.moveit,
                 self.gripper,
@@ -93,33 +49,19 @@ class OpenManipulatorMoveItNode(Node):
         configuration: str | dict[str, float],
         controller_name: str,
     ) -> bool:
-        """Named state 또는 직접 지정한 관절값까지 경로를 계획하고 실행한다."""
-
+        """Named state까지 경로를 계획하고 실행한다."""
         component.set_start_state_to_current_state()
-
-        if isinstance(configuration, str):
-            component.set_goal_state(
-                configuration_name=configuration
-            )
-
+        if issubclass(type(configuration), str):
+            component.set_goal_state(configuration_name=configuration)
         else:
             robot_model = self.moveit.get_robot_model()
             robot_state = RobotState(robot_model)
-
             robot_state.joint_positions = configuration
-
-            joint_model_group = robot_model.get_joint_model_group(
-                "arm"
-            )
-
+            joint_model_group = robot_model.get_joint_model_group("arm")
             joint_constraint = construct_joint_constraint(
-                robot_state=robot_state,
-                joint_model_group=joint_model_group,
+                robot_state=robot_state, joint_model_group=joint_model_group
             )
-
-            component.set_goal_state(
-                motion_plan_constraints=[joint_constraint]
-            )
+            component.set_goal_state(motion_plan_constraints=[joint_constraint])
 
         plan_result = component.plan()
 
@@ -127,7 +69,6 @@ class OpenManipulatorMoveItNode(Node):
             plan_result.trajectory,
             controllers=[controller_name],
         )
-
         return True
 
 
@@ -135,18 +76,12 @@ def main() -> None:
     rclpy.init()
 
     node = OpenManipulatorMoveItNode()
-
     try:
         rclpy.spin(node)
-
     except KeyboardInterrupt:
-        pass
-
-    finally:
         node.destroy_node()
         rclpy.try_shutdown()
-
-        # MoveItPy 종료 과정에서 발생하는 오류 우회
+        # todo : moveitpy shutdown 작동 되는지 확인하고 수정하기
         sys.stdout.flush()
         sys.stderr.flush()
         os._exit(0)

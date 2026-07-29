@@ -67,6 +67,7 @@ def generate_launch_description() -> LaunchDescription:
     moveit_py_parameters.update(load_yaml(controllers_file))
 
     use_sim_time = LaunchConfiguration("use_sim_time")
+    node_executable = LaunchConfiguration("node_executable")
     robot_description = {
         "robot_description": ParameterValue(
             Command(
@@ -83,7 +84,7 @@ def generate_launch_description() -> LaunchDescription:
 
     moveit_py_node = Node(
         package="tf2_basic",
-        executable="moveit_class",
+        executable=node_executable,
         name="open_manipulator_moveit_py",
         output="screen",
         parameters=[
@@ -98,6 +99,13 @@ def generate_launch_description() -> LaunchDescription:
                 "use_sim_time",
                 default_value="false",
                 description="Gazebo의 /clock 사용 여부",
+            ),
+            DeclareLaunchArgument(
+                "node_executable",
+                default_value="moveit_class",
+                description=(
+                    "tf2_basic setup.py의 console_scripts에 등록된 실행 파일 이름"
+                ),
             ),
             moveit_py_node,
         ]
