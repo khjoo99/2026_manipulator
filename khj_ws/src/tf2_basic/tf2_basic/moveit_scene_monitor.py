@@ -27,6 +27,7 @@ class OpenManipulatorMoveItNode(Node):
         }
         self.planning_scene_monitor = self.moveit.get_planning_scene_monitor()
         self.add_table()
+        self.add_wall()
         self.move_manipulator()
 
     def move_manipulator(self):
@@ -90,15 +91,67 @@ class OpenManipulatorMoveItNode(Node):
         table_pose.position.y = 0.0
         table_pose.position.z = -0.025
 
+        table_pose.orientation.x = 0.0
+        table_pose.orientation.y = 0.0
+        table_pose.orientation.z = 0.0
+        table_pose.orientation.w = 1.0
+
         collision_object.primitives.append(table)  # type: ignore
         collision_object.primitive_poses.append(table_pose)  # type: ignore
         collision_object.operation = CollisionObject.ADD
 
-        with self.planning_scene_monitor.read_write() as scene:
-            scene.apply_collision_object(collision_object)
-            scene.current_state.update()
+        success = self.planning_scene_monitor.process_collision_object(collision_object)
 
-        self.get_logger().info("table을 추가 했습니다")
+        if success:
+            self.get_logger().info("table을 추가 했습니다")
+
+        with self.planning_scene_monitor.read_only() as scene:
+            scene_msg = scene.planning_scene_message
+
+            self.get_logger().info(f"planning frame: {scene.planning_frame}")
+
+            for obj in scene_msg.world.collision_objects:
+                self.get_logger().info(
+                    f"collision object: id={obj.id}, frame={obj.header.frame_id}"
+                )
+
+    def add_wall(self):
+        collision_object = CollisionObject()
+        collision_object.header.frame_id = "world"
+        collision_object.id = "wall"
+
+        wall = SolidPrimitive()
+        wall.type = SolidPrimitive.BOX
+        wall.dimensions = [0.4, 0.02, 0.3]  # x, y, z , --m 단위
+
+        wall_pose = Pose()
+        wall_pose.position.x = 0.3
+        wall_pose.position.y = 0.0
+        wall_pose.position.z = 0.0
+
+        wall_pose.orientation.x = 0.0
+        wall_pose.orientation.y = 0.0
+        wall_pose.orientation.z = 0.0
+        wall_pose.orientation.w = 1.0
+
+        collision_object.primitives.append(wall)  # type: ignore
+        collision_object.primitive_poses.append(wall_pose)  # type: ignore
+        collision_object.operation = CollisionObject.ADD
+
+        success = self.planning_scene_monitor.process_collision_object(collision_object)
+
+        if success:
+            self.get_logger().info("wall을 추가 했습니다")
+
+        with self.planning_scene_monitor.read_only() as scene:
+            scene_msg = scene.planning_scene_message
+
+            self.get_logger().info(f"planning frame: {scene.planning_frame}")
+
+            for obj in scene_msg.world.collision_objects:
+                self.get_logger().info(
+                    f"collision object: id={obj.id}, frame={obj.header.frame_id}"
+                )
 
 
 def main() -> None:
