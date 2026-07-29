@@ -17,7 +17,7 @@ class OpenManipulatorMoveItNode(Node):
         self.move_manipulator()
 
     def move_manipulator(self):
-        for goal_name in ("home", "init", "home", "init"):
+        for goal_name in ("home", "init", "my_pose", "home", "init"):
             self.get_logger().info("joint move!!!")
             self.plan_and_execute(
                 self.moveit,
@@ -25,7 +25,7 @@ class OpenManipulatorMoveItNode(Node):
                 configuration_name=goal_name,
                 controller_name="arm_controller",
             )
-        for goal_name in ("open", "close", "open", "close"):
+        for goal_name in ("open", "close", "my_pose", "open", "close"):
             self.get_logger().info("gripper move!!!")
             self.plan_and_execute(
                 self.moveit,
@@ -63,6 +63,7 @@ def main() -> None:
     except KeyboardInterrupt:
         node.destroy_node()
         rclpy.try_shutdown()
+        # todo : moveitpy shutdown 작동 되는지 확인하고 수정하기
         sys.stdout.flush()
         sys.stderr.flush()
         os._exit(0)
