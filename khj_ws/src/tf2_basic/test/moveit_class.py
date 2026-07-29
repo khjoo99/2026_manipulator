@@ -17,7 +17,7 @@ class OpenManipulatorMoveItNode(Node):
         self.move_manipulator()
 
     def move_manipulator(self):
-        for goal_name in ("home", "init", "my_pose", "home", "init"):
+        for goal_name in ("home", "init", "my_pose", "left_pose", "right_pose", "carry_pose", "home", "init"):
             self.get_logger().info("joint move!!!")
             self.plan_and_execute(
                 self.moveit,
@@ -25,7 +25,7 @@ class OpenManipulatorMoveItNode(Node):
                 configuration_name=goal_name,
                 controller_name="arm_controller",
             )
-        for goal_name in ("open", "close", "my_pose", "open", "close"):
+        for goal_name in ("open", "close", "open", "close"):
             self.get_logger().info("gripper move!!!")
             self.plan_and_execute(
                 self.moveit,
@@ -38,12 +38,15 @@ class OpenManipulatorMoveItNode(Node):
         self,
         moveit: MoveItPy,
         component,
-        configuration_name: str,
+        configuration: str | list[float],
         controller_name: str,
     ) -> bool:
         """Named state까지 경로를 계획하고 실행한다."""
         component.set_start_state_to_current_state()
-        component.set_goal_state(configuration_name=configuration_name)
+        if issubclass(type(configuration), str):
+            component.set_goal_state(configuration_name=configuration)
+        else:
+            component.set_goal_state(configuration=configuration)
 
         plan_result = component.plan()
 
