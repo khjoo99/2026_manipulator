@@ -16,6 +16,7 @@ class OpenManipulatorMoveItNode(Node):
         self.gripper = self.moveit.get_planning_component("gripper")
         self.move_manipulator()
 
+
     def move_manipulator(self):
         for goal_name in ("home", "init", "my_pose", "left_pose", "right_pose", "carry_pose", "home", "init"):
             self.get_logger().info("joint move!!!")
