@@ -340,7 +340,6 @@ class OpenManipulatorMoveItNode(Node):
             self.get_logger().info("world 에 내려 놓은 box 추가")
         return success
 
-
 def main() -> None:
     rclpy.init()
 
