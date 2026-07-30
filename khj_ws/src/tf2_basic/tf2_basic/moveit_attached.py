@@ -63,10 +63,17 @@ class OpenManipulatorMoveItNode(Node):
             controller_name="gripper_controller",
         )
         # 물체 집기 직전 자세 2
-        # - 0.8452234141247814
-        # - 0.44485442848662915
-        # - 0.4126408319410304
-        # - -0.8283496254584533
+        self.plan_and_execute(
+            self.moveit,
+            self.arm,
+            configuration={
+                "joint1": 0.8452234141247814,
+                "joint2": 0.44485442848662915,
+                "joint3": 0.4126408319410304,
+                "joint4": -0.8283496254584533,
+            },
+            controller_name="arm_controller",
+        )
         # 그리퍼 닫기
         self.plan_and_execute(
             self.moveit,
@@ -77,15 +84,18 @@ class OpenManipulatorMoveItNode(Node):
         # 물체를 로봇 부착
         self.attach_object()
         # 물체를 든 상태로 이동 ( 회피 plane)
-        # todo 목표 위치 확인
+        # -0.9725438195197036
+        # - 0.44485442848662915
+        # - 0.3666214083044612
+        # - -0.8406214717615383
         self.plan_and_execute(
             self.moveit,
             self.arm,
             configuration={
-                "joint1": -0.9464661461252337,
-                "joint2": -0.0184077694548348,
-                "joint3": 0.9510680884888902,
-                "joint4": 0.9664078963681608,
+                "joint1": -0.9725438195197036,
+                "joint2": 0.44485442848662915,
+                "joint3": 0.3666214083044612,
+                "joint4": -0.8406214717615383,
             },
             controller_name="arm_controller",
         )
@@ -99,8 +109,14 @@ class OpenManipulatorMoveItNode(Node):
         # attached object 제거
         self.detach_object()
         # world에 box 다시 추가
-        # todo 목표 위치 확인
-        self.add_placed_object(0.1, 0.2, 0.3)
+        self.add_placed_object(0.2, -0.2, 0.065)
+        # 초기 위치 이동
+        self.plan_and_execute(
+            self.moveit,
+            self.arm,
+            configuration="init",
+            controller_name="arm_controller",
+        )
 
     def plan_and_execute(
         self,
