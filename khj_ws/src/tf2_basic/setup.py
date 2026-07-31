@@ -68,6 +68,11 @@ data_files = [
         "share/" + package_name + "/data",
         glob(os.path.join("data", "*.yaml")),
     ),
+    ("share/" + package_name + "/world",
+    glob(os.path.join("world", "*.sdf"))),
+
+    ("share/" + package_name + "/models/vehicle_test",
+    glob(os.path.join("models", "vehicle_test", "*.*"))),
 ]
 
 data_files += collect_data_files(
