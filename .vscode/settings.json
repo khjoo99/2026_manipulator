@@ -1,3 +1,16 @@
 {
-    "cmake.sourceDirectory": "/home/khjoo/2026_manipulator/khj_ws/src/user_interface"
+  "python.analysis.extraPaths": [
+    "/opt/ros/jazzy/lib/python3.12/site-packages",
+    "${workspaceFolder}/khj_ws/install/khj_basic/lib/python3.12/site-packages",
+    "${workspaceFolder}/khj_ws/install/tf2_basic/lib/python3.12/site-packages",
+    "${workspaceFolder}/khj_ws/install/user_interface/lib/python3.12/site-packages"
+  ],
+  "python.autoComplete.extraPaths": [
+    "/opt/ros/jazzy/lib/python3.12/site-packages",
+    "${workspaceFolder}/khj_ws/install/khj_basic/lib/python3.12/site-packages",
+    "${workspaceFolder}/khj_ws/install/tf2_basic/lib/python3.12/site-packages",
+    "${workspaceFolder}/khj_ws/install/user_interface/lib/python3.12/site-packages"
+  ],
+  "python.analysis.stubPath": "${workspaceFolder}/typings",
+  "cmake.sourceDirectory": "/home/khjoo/2026_manipulator/khj_ws/src/user_interface"
 }
