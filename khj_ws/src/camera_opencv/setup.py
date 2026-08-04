@@ -33,6 +33,8 @@ setup(
             "camera_sub = camera_opencv.camera_sub:main",
             "circle_follow = camera_opencv.circle_follow:main",
             "circle_follow_teacher = camera_opencv.circle_follow_teacher:main",
+            "event_draw = camera_opencv.event_draw:main",
+            "color = camera_opencv.color:main",
             
             ],
         
