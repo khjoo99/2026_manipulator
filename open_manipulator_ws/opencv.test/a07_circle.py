@@ -13,6 +13,7 @@ def main():
     cv2.rectangle(img, (x1, y1), (x2, y2), color.RED, 3)
     cv2.imshow("canvas", img)
     cv2.waitKey()  # 블럭 함수
+    cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":

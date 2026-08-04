@@ -37,6 +37,7 @@ def main():
             option[0] += 1
         if option[0] > 12:
             option[0] = 0
+    cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":

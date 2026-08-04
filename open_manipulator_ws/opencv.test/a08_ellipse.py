@@ -20,6 +20,7 @@ def main():
     cv2.ellipse(img, pt2, size, 90, -45, 90, color.ORANGE, 4)  # type: ignore
     cv2.imshow("canvas", img)
     cv2.waitKey()  # 블럭 함수
+    cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":
