@@ -35,6 +35,8 @@ setup(
             "circle_follow_teacher = camera_opencv.circle_follow_teacher:main",
             "event_draw = camera_opencv.event_draw:main",
             "color = camera_opencv.color:main",
+            "find_redball = camera_opencv.find_redball:main",
+            
             
             ],
         

@@ -3,36 +3,36 @@ from glob import glob
 
 from setuptools import find_packages, setup
 
+
 package_name = "tf2_basic"
 
 
-def collect_data_files(source_directory, install_directory):
-    collected_files = []
+def collect_model_files(models_directory):
+    model_data_files = []
 
-    for root, directories, files in os.walk(source_directory):
+    for root, directories, files in os.walk(models_directory):
         if not files:
             continue
 
-        relative_path = os.path.relpath(root, source_directory)
-
-        if relative_path == ".":
-            destination = install_directory
-        else:
-            destination = os.path.join(
-                install_directory,
-                relative_path,
-            )
-
-        source_files = [
-            os.path.join(root, filename)
-            for filename in files
-        ]
-
-        collected_files.append(
-            (destination, source_files)
+        install_directory = os.path.join(
+            "share",
+            package_name,
+            root,
         )
 
-    return collected_files
+        source_files = [
+            os.path.join(root, file_name)
+            for file_name in files
+        ]
+
+        model_data_files.append(
+            (
+                install_directory,
+                source_files,
+            )
+        )
+
+    return model_data_files
 
 
 data_files = [
@@ -61,24 +61,12 @@ data_files = [
         glob(os.path.join("meshes", "*.*")),
     ),
     (
-        "share/" + package_name + "/world",
-        glob(os.path.join("world", "*.*")),
-    ),
-    (
         "share/" + package_name + "/data",
         glob(os.path.join("data", "*.yaml")),
     ),
-    ("share/" + package_name + "/world",
-    glob(os.path.join("world", "*.sdf"))),
-
-    ("share/" + package_name + "/models/vehicle_test",
-    glob(os.path.join("models", "vehicle_test", "*.*"))),
 ]
 
-data_files += collect_data_files(
-    "models",
-    os.path.join("share", package_name, "models"),
-)
+data_files += collect_model_files("models")
 
 
 setup(
