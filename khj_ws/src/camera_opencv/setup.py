@@ -36,7 +36,8 @@ setup(
             "event_draw = camera_opencv.event_draw:main",
             "color = camera_opencv.color:main",
             "find_redball = camera_opencv.find_redball:main",
-            
+            "detect_aruco = camera_opencv.detect_aruco:main",
+            "camera_Canny = camera_opencv.camera_Canny:main",
             
             ],
         
