@@ -1,54 +1,34 @@
-import subprocess
-import sys
-from pathlib import Path
+# depth + yolo 가상 환경에서 실행
+import cv2
+from ultralytics import YOLO
 
 
 def main():
 
-    # 1: path
-    data_path = Path(__file__).parent / "data"
+    cap = cv2.VideoCapture(0, cv2.CAP_V4L2)
+    # MJPG 설정
+    cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc("M", "J", "P", "G"))
+    cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+    cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+    cap.set(cv2.CAP_PROP_FPS, 30)
 
-    pb_path = data_path / "frozen_inference_graph.pb"
+    if not cap.isOpened():
+        print("cap is not open")
+        return
 
-    onnx_path = data_path / "faster_rcnn_resnet50_coco.onnx"
+    model = YOLO("yolo26n.pt")  # load a pretrained YOLO26n model
+    while True:
+        ret, frame = cap.read()
+        results = model(frame)
+        annotated = results[0].plot()  # type: ignore
 
-    print("input  =", pb_path)
-    print("output =", onnx_path)
+        if not ret:
+            break
+        cv2.imshow("Camera", annotated)
+        if cv2.waitKey(1) == ord("q"):
+            break
 
-    if not pb_path.exists():
-        raise FileNotFoundError(f"TensorFlow model not found: {pb_path}")
-
-    # 2: TensorFlow -> ONNX
-    cmd = [
-        sys.executable,
-        "-m",
-        "tf2onnx.convert",
-        "--graphdef",
-        str(pb_path),
-        "--output",
-        str(onnx_path),
-        "--inputs",
-        "image_tensor:0",
-        "--outputs",
-        ("detection_boxes:0,detection_scores:0,detection_classes:0,num_detections:0"),
-        "--opset",
-        "13",
-    ]
-
-    print()
-    print("===== TensorFlow -> ONNX =====")
-
-    print("python =", sys.executable)
-
-    print("command =", " ".join(cmd))
-
-    print()
-
-    subprocess.run(cmd, check=True)
-
-    print()
-    print("ONNX 변환 완료")
-    print("model =", onnx_path)
+    cv2.destroyAllWindows()
 
 
 if __name__ == "__main__":
