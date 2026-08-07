@@ -3,3 +3,5 @@ install/
 log/
 __pycache__/
 .venv/
+browse.*
+frozen_inference_graph.pb
