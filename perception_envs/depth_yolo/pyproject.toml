@@ -1,0 +1,26 @@
+[project]
+name = "depth-yolo"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "khjoo", email = "khjoo990408@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.0,<3",
+    "opencv-python>=4.10,<5",
+    "pillow",
+    "pyyaml",
+    "requests",
+    "scipy",
+    "tqdm",
+    "ultralytics==8.4.115",
+]
+
+[project.scripts]
+depth-yolo = "depth_yolo:main"
+
+[build-system]
+requires = ["uv_build>=0.12.2,<0.13.0"]
+build-backend = "uv_build"
