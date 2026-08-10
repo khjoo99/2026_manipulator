@@ -9,6 +9,7 @@ from ultralytics import YOLO
 def main():
     print(torch.__version__)
     print(torch.cuda.is_available())
+    #
 
     # 모델 로드
     model = YOLO("yolo26n-seg.pt")  # yolo11n-seg.py
