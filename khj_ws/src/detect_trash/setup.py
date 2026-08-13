@@ -1,4 +1,5 @@
 from setuptools import find_packages, setup
+from glob import glob
 
 package_name = 'detect_trash'
 
@@ -10,6 +11,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+        ('share/detect_trash/launch', glob('launch/*.launch.py')),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -26,6 +28,9 @@ setup(
         'console_scripts': [
             
             'homography_calibration = detect_trash.homography_calibration:main',
+            'aruco_homography_calibration = detect_trash.aruco_homography_calibration:main',
+            'detector_node = detect_trash.detector_node:main',
+            'robot_control = detect_trash.robot_control:main',
             
         ],
     },

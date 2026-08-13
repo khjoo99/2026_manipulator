@@ -83,10 +83,10 @@ class HomographyCalibration(Node):
         # --------------------------------------------------
 
         self.robot_points = np.array([
-            [0.15,  0.15],    # 1번
-            [0.35,  0.15],    # 2번
-            [0.35, -0.15],    # 3번
-            [0.15, -0.15],    # 4번
+            [-0.25,  -0.25],    # 1번
+            [-0.25,  0.25],    # 2번
+            [0.25, 0.25],    # 3번
+            [0.25, -0.25],    # 4번
         ], dtype=np.float32)
 
         cv2.namedWindow('Homography Calibration')
