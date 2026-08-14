@@ -31,6 +31,7 @@ setup(
             'aruco_homography_calibration = detect_trash.aruco_homography_calibration:main',
             'detector_node = detect_trash.detector_node:main',
             'robot_control = detect_trash.robot_control:main',
+            'dashboard_node = detect_trash.dashboard_node:main',
             
         ],
     },
